@@ -99,13 +99,204 @@
         .banner {
             display: flex;
             margin: auto;
-            height:auto;
-            padding-top:50px;
+            height: auto;
+            padding-top: 10px;
         }
-        
-        .dog_picture img{
+
+        .dog_picture img {
             max-width: 100%;
-            margin:auto;
+            margin: auto;
+        }
+
+        .banner-content {
+            position: absolute;
+            width: 100px;
+            height: 120px;
+            color: white;
+            z-index: 2;
+            left: 60px;
+            top: 70px;
+            background-color: black;
+            padding: 20px;
+            opacity: 0.4;
+            border-radius: 30px;
+            font-size: 10px;
+        }
+
+        h2 {
+            padding: 8px;
+        }
+
+        .adoption,
+        .donation {
+            width: 1200px;
+            margin: auto;
+        }
+
+        .dog_adoption,
+        .donation_mode {
+            font-size: 30px;
+            text-decoration: none;
+        }
+
+        .adoption-section {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .adoption_content_side,
+        .adoption_content {
+            width: 290px;
+            height: 380px;
+            box-sizing: border-box;
+            border-bottom: solid;
+            border: solid #FFE5B4;
+            background-color: #FFE5B4;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .adoption_content_side {
+            margin: auto;
+        }
+
+        .adoption_content {
+            display: none;
+        }
+
+        .dog-tongue img {
+            width: 80%;
+            height: 80%;
+            display: block;
+            margin: auto;
+            box-shadow: 0 0 1em gray;
+            border-radius: 10px;
+        }
+
+        .description {
+            margin-left: 30px;
+            margin-top: 20px;
+        }
+
+        p {
+            font-weight: normal;
+        }
+
+        .gap_20 {
+            height: 20px;
+        }
+
+        .gap_80 {
+            height: 100px;
+        }
+
+        .donation {
+            display: 10%;
+        }
+
+        .donation-section {
+            display: flex;
+            margin-top: 20px;
+        }
+
+        .help {
+            width: 300px;
+            height: 330px;
+            background-color: #FFE5B4;
+            padding: 20px;
+            border-bottom-left-radius: 10px;
+            border-top-left-radius: 10px;
+            font-size: 15px;
+            margin: auto;
+        }
+
+        .donation_topic {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+
+        .donation_button {
+            margin-top: 20px;
+            padding: 10px;
+            right: 20px;
+            width: 200px;
+            border-radius: 5px;
+            padding: 15px 25px;
+            font-size: 22px;
+            text-decoration: none;
+            margin: 20px;
+            color: #fff;
+            border: orangered;
+            position: relative;
+            display: inline-block;
+            background-color: #e67e22;
+            box-shadow: 0px 5px 0px 0px #CD6509;
+        }
+
+        .donation_button:hover {
+            color: yellow;
+        }
+
+        .picture {
+            width: 562px;
+            margin: auto;
+        }
+
+        #large {
+            height: 370px;
+            display: flex;
+            margin: auto;
+        }
+
+        .small-display {
+            display: flex;
+        }
+
+        .small {
+            height: 120px;
+            padding: 0.5px;
+        }
+
+        .innocent_picture img {
+            height: 340px;
+        }
+
+        .gift {
+            width: 300px;
+            height: 330px;
+            background-color: #FFE5B4;
+            padding: 20px;
+            border-bottom-right-radius: 10px;
+            border-top-right-radius: 10px;
+            font-size: 15px;
+        }
+
+        .online_adoption_topic {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+
+        .transfer {
+            padding-top: 20px;
+        }
+
+        .p_space {
+            height: 20px;
+        }
+
+        .footer {
+            background-color: beige;
+            box-shadow: 0 10px 8px 20px lightgrey;
+            padding: 20px;
+            font-size: 15px;
+        }
+
+        .contact {
+            top: 20px;
+            width: 100%;
         }
 
         @media screen and (min-width:768px) {
@@ -135,13 +326,193 @@
                 border-bottom: none;
             }
 
+            .banner-content {
+                position: absolute;
+                width: 300px;
+                height: 200px;
+                color: white;
+                z-index: 2;
+                top: 150px;
+                left: 100px;
+                background-color: black;
+                padding: 20px;
+                opacity: 0.4;
+                border-radius: 30px;
+                font-size: 25px;
+            }
+
+            .adoption_content {
+                display: block;
+                margin: 0px 5px;
+            }
+
+            .adoption,
+            .donation {
+                width: 1200px;
+                margin: auto;
+            }
             
-        .banner {
-            display: flex;
-            margin: auto;
-            height:auto;
-            padding-top: 5%;
-        }
+            .dog_adoption,
+            .donation_mode {
+                font-size: 30px;
+                text-decoration: none;
+            }
+            
+            .adoption-section {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 20px;
+            }
+            
+            .adoption_content_side,
+            .adoption_content {
+                width: 290px;
+                height: 380px;
+                box-sizing: border-box;
+                border-bottom: solid;
+                border: solid #FFE5B4;
+                background-color: #FFE5B4;
+                padding: 20px;
+                border-radius: 10px;
+            }
+
+            .adoption_content_side {
+                margin: auto;
+            }
+            
+            .adoption_content {
+                display: block;
+            }
+            
+            .dog-tongue img {
+                width: 80%;
+                height: 80%;
+                display: block;
+                margin: auto;
+                box-shadow: 0 0 1em gray;
+                border-radius: 10px;
+            }
+
+            .description {
+                margin-left: 30px;
+                margin-top: 20px;
+            }
+
+            p {
+                font-weight: normal;
+            }
+
+            .gap_20 {
+                height: 20px;
+            }
+
+            .gap_80 {
+                height: 100px;
+            }
+
+            .donation-section {
+                display: flex;
+                margin-top: 20px;
+            }
+
+            .help {
+                width: 300px;
+                height: 330px;
+                background-color: #FFE5B4;
+                padding: 20px;
+                border-bottom-left-radius: 10px;
+                border-top-left-radius: 10px;
+                font-size: 15px;
+                margin: auto;
+            }
+
+            .donation_topic {
+                margin-top: 20px;
+                margin-bottom: 20px;
+                font-size: 20px;
+            }
+
+            .donation_button {
+                margin-top: 20px;
+                padding: 10px;
+                right: 20px;
+                width: 200px;
+                border-radius: 5px;
+                padding: 15px 25px;
+                font-size: 22px;
+                text-decoration: none;
+                margin: 20px;
+                color: #fff;
+                border: orangered;
+                position: relative;
+                display: inline-block;
+                background-color: #e67e22;
+                box-shadow: 0px 5px 0px 0px #CD6509;
+            }
+
+            .donation_button:hover {
+                color: yellow;
+            }
+
+            .picture {
+                width: 562px;
+                margin: auto;
+            }
+
+            #large {
+                height: 370px;
+                display: flex;
+                margin: auto;
+            }
+
+            .small-display {
+                display: flex;
+            }
+
+            .small {
+                height: 120px;
+                padding: 0.5px;
+            }
+
+            .innocent_picture img {
+                height: 340px;
+            }
+
+            .gift {
+                width: 300px;
+                height: 330px;
+                background-color: #FFE5B4;
+                padding: 20px;
+                border-bottom-right-radius: 10px;
+                border-top-right-radius: 10px;
+                font-size: 15px;
+            }
+
+            .online_adoption_topic {
+                margin-top: 20px;
+                margin-bottom: 20px;
+                font-size: 20px;
+            }
+
+            .transfer {
+                padding-top: 20px;
+            }
+
+            .p_space {
+                height: 20px;
+            }
+
+            .footer {
+                background-color: beige;
+                box-shadow: 0 10px 8px 20px lightgrey;
+                padding: 20px;
+                font-size: 15px;
+            }
+
+            .contact {
+                top: 20px;
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -174,7 +545,7 @@
                 </div>
             </div>
         </div>
-        <!-- <div class="adoption">
+        <div class="adoption">
             <h2 class="dog_adoption">寵物領養</h2>
             <div class="adoption-section">
                 <div class="adoption_content_side">
@@ -185,7 +556,6 @@
                             <p>寵物性別：男生</p>
                             <p>寵物年齡：1-2歲</p>
                         </div>
-                        <a href="special_dog_adoption.html" class="more">more</a>
                     </div>
                 </div>
                 <div class="adoption_content">
@@ -196,7 +566,6 @@
                             <p>寵物性別：男生</p>
                             <p>寵物年齡：1-2歲</p>
                         </div>
-                        <a href="special_dog_adoption.html" class="more">more</a>
                     </div>
                 </div>
                 <div class="adoption_content">
@@ -207,7 +576,6 @@
                             <p>寵物性別：男生</p>
                             <p>寵物年齡：1-2歲</p>
                         </div>
-                        <a href="special_dog_adoption.html" class="more">more</a>
                     </div>
                 </div>
                 <div class="adoption_content_side">
@@ -218,7 +586,6 @@
                             <p>寵物性別：男生</p>
                             <p>寵物年齡：1-2歲</p>
                         </div>
-                        <a href="special_dog_adoption.html" class="more">more</a>
                     </div>
                 </div>
             </div>
@@ -226,42 +593,35 @@
         <div class="gap_20"></div>
         <div class="donation">
             <h2 class="donation_mode" id="donation_mode">捐款
-                </ㄘ>
-                <div class="donation-section">
-                    <div class="help">
-                        <h3 class="donation_topic">我們的狗狗需要
-                            您的協助</h3>
-                        <p>您的捐款可以協助我們照顧250隻生病、受</p>
-                        <p>傷、年老、受虐和被忽視的狗狗。</p>
-                        <p>因為有您的支持，我們得以支付250隻狗狗</p>
-                        <P>的食物、居住環境維護、醫療照護、訓練</P>
-                        <P>以及協助狗狗尋找到屬於他們永遠的家。</P>
-                    </div>
-                    <div class="picture">
-                        <div>
-                            <img id="large" src="draw.jpg" .jpg">
-                        </div>
-                        <div class="small-display">
-                            <img src="draw.jpg" class="small" />
-                            <img src="gold_dog.jpg" class="small" />
-                        </div>
-                    </div>
-                    <div class="gift">
-                        <h3 class="online_adoption_topic">年末捐款送好禮
-                        </h3>
-                        <p>為了感謝所有支持幫助狗狗的每一個你們，今年，我們</p>
-                        <p>準備了小小的回饋禮品。凡是單筆捐款300元（含）以</p>
-                        <p>上，便能獲得可愛狗狗樣貌的紅包袋（兩入一組）；</p>
-                        <p>單筆捐款1,500（含）以上，加贈環保飲料提袋和杯墊</p>
-                        <p>組，具設計感的配色讓你不論在家或在外都很時尚！</p>
-                        <h3 class="transfer">銀行轉帳</h3>
-                        <p>帳戶名稱: 愛狗樂園 </p>
-                        <p>銀行名稱: 011 - 上海商業儲蓄銀行</p>
-                        <p>分行代碼: 0196 - 民生分行</p>
-                        <p>銀行帳號: 1234 00000 04567</p>
-                        <p>開立收據或其他問題，請透過lisa0821@gmail.com聯絡我們！</p>
+            </h2>
+            <div class="donation-section">
+                <div class="help">
+                    <h3 class="donation_topic">我們的狗狗需要
+                        您的協助</h3>
+                    <p>您的捐款可以協助我們照顧250隻生病、受</p>
+                    <p>傷、年老、受虐和被忽視的狗狗。</p>
+                    <p>因為有您的支持，我們得以支付250隻狗狗</p>
+                    <P>的食物、居住環境維護、醫療照護、訓練</P>
+                    <P>以及協助狗狗尋找到屬於他們永遠的家。</P>
+                    <input type="button" value="了解更多" class="donation_button" onclick="location.href='unique.html'">
+                </div>
+                <div class="picture">
+                    <div>
+                        <img id="large" src="rot.png">
                     </div>
                 </div>
+                <div class="gift">
+                    <h3 class="online_adoption_topic">想參與我們嗎？
+                        讓我們從現在開始！
+                    </h3>
+                    <p>我們不斷地在尋找，能夠提供狗狗們更好</p>
+                    <p>生活品質的方式，有您的支持與協助可以讓</p>
+                    <p>我們離理想更近，您是我們持續進步與改變</p>
+                    <p>的泉源！若不知道如何開始，可以點下面</p>
+                    <p>的按鈕就可以更了解了喔！</p>
+                    <input type="button" value="了解更多" class="donation_button" onclick="location.href='unique.html'">
+                </div>
+            </div>
         </div>
         <div class="gap_80"></div>
         <div class="footer">
@@ -274,22 +634,6 @@
             <p>©All Rights Reserved</p>
         </div>
     </div>
-
-    <script>
-        function showLarge(e) {
-            let small = e.target;
-            document.getElementById("large").src = small.src;
-        }
-
-        function init() {
-            let smalls = document.getElementsByClassName("small");
-            for (let i = 0; i < smalls.length; i++) {
-                smalls[i].onclick = showLarge;
-            }
-        }
-
-        window.addEventListener("load", init, false);
-    </script> --> -->
 </body>
 
 </html>
