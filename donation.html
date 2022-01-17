@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        #menu_control {
+            position: absolute;
+            z-index: -2;
+            opacity: 0;
+        }
+
+        .header {
+            height: 68px;
+            background-color: white;
+            box-shadow: 0 8px 6px -6px lightgrey;
+            position: relative;
+            position: fixed;
+            z-index: 5;
+            width: 100%;
+        }
+
+        .menu_btn {
+            width: 59px;
+            height: 59px;
+            background-color: #f5f5dc;
+            display: block;
+            position: absolute;
+            top: -1px;
+            padding-top: 10px;
+            right: 5px;
+        }
+
+        .menu_btn span {
+            opacity: 0;
+            width: 1px;
+            height: 1px;
+            display: block;
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        .menu_btn::before {
+            content: '';
+            position: absolute;
+            height: 3px;
+            left: 5px;
+            right: 10px;
+            width: 50px;
+            background-color: #794715;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            box-shadow: 0px 15px 0px #794715,
+                0px -15px 0px #794715;
+        }
+
+        nav {
+            width: 80%;
+            height: calc(100vh - 80px);
+            background-color: #f5f5dc;
+            position: absolute;
+            top: 70px;
+            left: -100%;
+            transition: .5s;
+        }
+
+        nav a {
+            display: block;
+            text-decoration: none;
+            color: #794715;
+            padding: 10px 20px;
+            transform: .5s;
+            border-bottom: 1px solid #794715;
+        }
+
+        .list-of-donate {
+            color: crimson;
+            font-weight: bold;
+        }
+
+        #menu_control:checked~.header nav {
+            left: 0;
+        }
+
+        .banner {
+            display: flex;
+            margin: auto;
+            height: auto;
+            box-sizing: border-box;
+            padding-top: 70px;
+            /* max-width: 800px; */
+            margin: auto;
+            position: relative;
+        }
+
+        .dog_picture img {
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+        }
+
+        .banner-content {
+            position: absolute;
+            width: 40%;
+            color: white;
+            z-index: 2;
+            left: 10px;
+            top: 50px;
+            padding-top: 20px;
+            border-radius: 30px;
+            box-sizing: border-box;
+            color: white;
+        }
+
+        .banner-content h1 {
+            font-size: 20px;
+        }
+
+        .banner-content p {
+            font-size: 6px;
+
+        }
+
+        .avoid-to-defraud {
+            box-sizing: border-box;
+            padding-right: 50px;
+            padding-left: 50px;
+            line-height: 30px;
+        }
+
+        .avoid-to-defraud h2 {
+            text-align: center;
+            padding-top: 70px;
+        }
+
+        .avoid-to-defraud h3 {
+            padding-right: 30px;
+
+        }
+
+        .avoid-to-defraud p {
+            line-height: 30px;
+        }
+
+        form {
+            background-color: #f5f5dc;
+            margin-top: 20px;
+            padding: 20px;
+            width: 70%;
+            margin: auto;
+            margin-top: 20px;
+            line-height: 30px;
+            border-radius: 15px/100px;
+        }
+
+        @media screen and (min-width:1200px) {
+            .menu_btn {
+                display: none;
+            }
+
+            .header {
+                display: flex;
+                justify-content: space-between;
+                position: fixed;
+                z-index: 5;
+            }
+
+            nav {
+                position: relative;
+                left: 0;
+                display: flex;
+                width: auto;
+                height: auto;
+                top: 0;
+                align-items: center;
+                background-color: white;
+            }
+
+            nav a {
+                border-bottom: none;
+            }
+
+            .banner {
+                margin: auto;
+                height: auto;
+                box-sizing: border-box;
+                border: 1px solid green;
+
+                position: relative;
+            }
+
+            .dog_picture img {
+                margin: 0;
+            }
+
+            .banner-content {
+                position: absolute;
+                width: 75%;
+                height: 75%;
+                color: white;
+                z-index: 2;
+                top: 50px;
+                left: 100px;
+                padding: 120px;
+                border-radius: 30px;
+                font-size: 50px;
+            }
+
+            .banner-content h1 {
+                font-size: 50px;
+            }
+
+            .banner-content p {
+                font-size: 30px;
+            }
+
+            .avoid-to-defraud {
+                box-sizing: border-box;
+                padding-right: 50px;
+                padding-left: 190px;
+                line-height: 30px;
+            }
+
+            .avoid-to-defraud h2 {
+                text-align: center;
+                padding-top: 70px;
+            }
+
+            .avoid-to-defraud h3 {
+                padding-right: 20px;
+
+            }
+
+            .avoid-to-defraud p {
+                line-height: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <input type="checkbox" name="" id="menu_control">
+        <div class="header">
+            <h1 class="logo">
+                <a href="home.html"><img src="DOG.png" alt=""></a>
+            </h1>
+            <label for="menu_control" class="menu_btn">
+                <span>選單</span>
+            </label>
+            <nav>
+                <a href="adoption.html">寵物認養</a>
+                <a href="participate.html">參與我們</a>
+                <a href="donation.html" class="list-of-donate">捐款</a>
+            </nav>
+        </div>
+        <div class="banner">
+            <div class="dog_picture">
+                <img src="donation.banner.jpg" alt="">
+                <div class="banner-content">
+                    <h1>捐款支持</h1>
+                    <p>
+                        因為有您的支持，我們得以支付250隻狗狗的食物、居住環境維護、醫療照護、訓練以及協助狗狗尋找到屬於他們永遠的家。</p>
+                </div>
+            </div>
+        </div>
+        <div class="avoid-to-defraud">
+            <h2>防詐騙提醒</h2>
+            <p>親愛的捐款者，您好：</p>
+            <p>近期社福界發生多起捐款詐騙事件，提醒各位捐款人，</p>
+            <ol>
+                <h3>愛狗樂園</h3>
+                <li>
+                    1. 不會在『非』服務時間致電給您；
+                </li>
+                <li>
+                    2. 不會要求您變更捐款扣款方式、操作ATM或網路銀行；
+                </li>
+                <li>
+                    3. 不會主動索取往來銀行電話、信用卡號等金融資料。
+                </li>
+            </ol>
+        </div>
+    </div>
+    <form action="participate.html" name="participate_form">
+        <h2>如果要捐款請填寫捐款資料</h2>
+        <label for="person">姓名</label><br>
+        <input type="text" id="person" name="person" placeholder="XXX"><br>
+        <label for="email">電子郵件</label><br>
+        <input type="text" name=email size=20 placeholder="xxxx@xxxx"><br>
+        <label for="contact_number">手機號碼</label><br>
+        <input type="tel" id="contact_number" name="contact_number" maxlength="10"><br>
+        <label for="contact_number">卡號</label><br>
+        <input type="text" name=cardNumber size=20 value="xxxx-xxxx-xxxx-xxxx"><br>
+        <p><input type=button VALUE="送出" onClick="validForm(this.form)">
+    </form>
+    <script>
+        function checkName(control) {
+            if (control.value == "") {
+                alert("請填寫姓名")
+                return (false);
+            }
+            return (true);
+        }
+
+        function checkEmail(email) {
+            index = email.indexOf('@', 0);
+            if (email.length == 0) {
+                alert("請輸入電子郵件地址！");
+                return (false);
+            } else if (index == -1) {
+                alert("錯誤：必須包含「@」。");
+                return (false);
+            } else if (index == 0) {
+                alert("錯誤：「@」之前不可為空。");
+                return (false);
+            } else if (index == email.length - 1) {
+                alert("錯誤：「@」之後不可為空。");
+                return (false);
+            } else
+                return (true);
+        }
+        function isNumericValidate(s) {
+            // var validChars = new Array("0123456789");
+            // 宣告一個陣列，並把 0 - 9 裝進去
+            var validChars = new Array(10);
+            // 把引數 s 的每個數字用迴圈分別比較陣列，
+            for (var i = 0; i <= 9; i++) {
+                validChars[i] = i;
+            }
+            // 如果全部都是數字則回傳對的，否則則是錯的
+            for (let i = 0; i < s.length; i++) {
+                const found = validChars.find(c => c == s[i]);
+                if (found === undefined) {
+                    return false;
+                }
+            }
+            return true;
+        }
+        function isHeadTwoValidate(number) {
+            return number[0] == 0 && number[1] == 9;
+        }
+
+        function checkContactNumber(contactNumber) {
+            if (contactNumber.value.length != 10) {
+                alert("請輸入正確手機號碼")
+                return (false);
+            } else if (!isNumericValidate(contactNumber.value)) {
+                alert("手機號碼只能為數字！");
+                return (false);
+            } else if (!isHeadTwoValidate(contactNumber.value)) {
+                alert("手機只能09開頭")
+                return (false);
+            } else
+                return (true);
+        }
+
+        function validForm(form) {
+            if (!checkName(form.person)) return;
+            if (!checkEmail(form.email.value)) return;
+            if (!checkContactNumber(form.contact_number)) return;
+            document.participate_form.submit();
+        }
+    </script>
+</body>
+
+</html>
